@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20D375B9-8E49-4984-8CD4-91B7A104EF26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReMasters.SuperMelee</RootNamespace>
+    <AssemblyName>ReMasters.SuperMelee</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvanceMath">
+      <HintPath>..\AdvanceMath.dll</HintPath>
+    </Reference>
+    <Reference Include="AdvanceSystem">
+      <HintPath>..\AdvanceSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Physics2D">
+      <HintPath>..\Physics2D.dll</HintPath>
+    </Reference>
+    <Reference Include="SdlDotNet, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SdlDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.OpenGl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=1ca010269a4501ef">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Tao.OpenGl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl.Glu, Version=1.5.0.3, Culture=neutral, PublicKeyToken=3661ea75021374b5">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Tao.OpenGl.Glu.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Sdl, Version=1.2.8.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Tao.Sdl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionAIInfo.cs" />
+    <Compile Include="Actions\BaseAction.cs" />
+    <Compile Include="Actions\BuildUpGunAction.cs" />
+    <Compile Include="Actions\GunAction.cs" />
+    <Compile Include="Actions\InstantAction.cs" />
+    <Compile Include="Actions\NullAction.cs" />
+    <Compile Include="Actions\PointDefence.cs" />
+    <Compile Include="Actions\ProximityAction.cs" />
+    <Compile Include="Actions\RayAction.cs" />
+    <Compile Include="Actions\Transform.cs" />
+    <Compile Include="Actions\TransporterAction.cs" />
+    <Compile Include="BaseDisplayDemo.cs" />
+    <Compile Include="Controlable.cs" />
+    <Compile Include="Controlers\BaseControler.cs" />
+    <Compile Include="Controlers\BaseTargetControler.cs" />
+    <Compile Include="Controlers\ComplexAIControler.cs" />
+    <Compile Include="Controlers\ConfusionControler.cs" />
+    <Compile Include="Controlers\FireAllControler.cs" />
+    <Compile Include="Controlers\MannedMissileControler.cs" />
+    <Compile Include="Controlers\MannedOrbitControler.cs" />
+    <Compile Include="Controlers\MissileControler.cs" />
+    <Compile Include="Controlers\OrbitControler.cs" />
+    <Compile Include="Controlers\PlayerControler.cs" />
+    <Compile Include="Controlers\ProximityTargetingControler.cs" />
+    <Compile Include="Controlers\SimpleAIControler.cs" />
+    <Compile Include="ControlHandlers.cs" />
+    <Compile Include="Controlers\SmartMissileControler.cs" />
+    <Compile Include="DataTypes\ControlInput.cs" />
+    <Compile Include="DataTypes\ActionList.cs" />
+    <Compile Include="DataTypes\ActionResult.cs" />
+    <Compile Include="DataTypes\Costs.cs" />
+    <Compile Include="DataTypes\EffectCollection.cs" />
+    <Compile Include="DataTypes\GeneralChange.cs" />
+    <Compile Include="DataTypes\ShipMovementInfo.cs" />
+    <Compile Include="DataTypes\ShipState.cs" />
+    <Compile Include="DataTypes\TargetingInfo.cs" />
+    <Compile Include="Effects\AbsorptionSheild.cs" />
+    <Compile Include="Effects\BaseEffect.cs" />
+    <Compile Include="Effects\BaseFilterProlongedEffect.cs" />
+    <Compile Include="Effects\BaseProlongedEffect.cs" />
+    <Compile Include="Effects\BlockingSheild.cs" />
+    <Compile Include="Effects\BordingPartyEffect.cs" />
+    <Compile Include="Effects\ControlerEffect.cs" />
+    <Compile Include="Effects\EffectBlockEffect.cs" />
+    <Compile Include="Effects\MovementInfoEffect.cs" />
+    <Compile Include="Effects\DiminishingShipStateEffect.cs" />
+    <Compile Include="Effects\RemoteActionEffect.cs" />
+    <Compile Include="Effects\EffectTypes.cs" />
+    <Compile Include="Effects\MedKitEffect.cs" />
+    <Compile Include="Effects\PhysicsStateEffect.cs" />
+    <Compile Include="Effects\ShipStateEffect.cs" />
+    <Compile Include="Enums\ControlableType.cs" />
+    <Compile Include="Enums\FactionDiplomacy.cs" />
+    <Compile Include="Enums\FactionType.cs" />
+    <Compile Include="Enums\TargetingTypes.cs" />
+    <Compile Include="DataTypes\FactionInfo.cs" />
+    <Compile Include="GUI\BattleSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BattleSetup.Designer.cs">
+      <DependentUpon>BattleSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ShipListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ShipListView.Designer.cs">
+      <DependentUpon>ShipListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ShipLoaderListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ShipLoaderListView.Designer.cs">
+      <DependentUpon>ShipLoaderListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ShipSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ShipSelection.Designer.cs">
+      <DependentUpon>ShipSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HyperMelee.cs" />
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="ConfigHandler.cs" />
+    <Compile Include="Logic.cs" />
+    <Compile Include="MeleeSound.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReMasterSDL.cs" />
+    <Compile Include="ReMastersWorld.cs" />
+    <Compile Include="Ship.cs" />
+    <Compile Include="CollidableBubble.cs" />
+    <Compile Include="ShipLoader.cs" />
+    <Compile Include="Ships\AndrosynthGuardian.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\ArilouSkiff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\Asteroid.cs" />
+    <Compile Include="Ships\ChenjesuBroodhome.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\ChmmrAvatar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\DruugeMauler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\EarthlingCarrier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\EarthlingCruiser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\IlwrathAvenger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\KohrAhMarauder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\KzerZaDreadnought.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\LifePod.cs" />
+    <Compile Include="Ships\MelnormeTrader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\MmrnmhrmXForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\MyconPodship.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\OrzNemesis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\PkunkFury.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\Planet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\ShofixtiScout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\SlylandroProbe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\SpathiEluder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\SupoxBlade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\SyreenPenetrator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\ThraddashTorch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\TimeWarp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\UmgahDrone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\UtwigJugger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\VuxIntruder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\YehatTerminator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ships\ZoqFotPikStinger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StatusBox.cs" />
+    <Compile Include="SuperMeleePaths.cs" />
+    <Compile Include="TargetRetriever.cs" />
+    <Compile Include="Weapons\BaseInstantWeapon.cs" />
+    <Compile Include="Weapons\RayWeapons.cs" />
+    <Compile Include="Weapons\SolidWeapons.cs" />
+    <Compile Include="Weapons\WeaponsLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\BattleSetup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BattleSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ShipSelection.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShipSelection.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
